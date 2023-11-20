@@ -39,8 +39,14 @@
         <br>
         <h6>
             <p>수집기간: 2023.10.25 ~ 2023.10.28 </p>
-            <p>표시조건: 매물 또는 최근 6개월간 실거래가 있는 단지</p>
+            <p>표시조건: KB시세가 제공되면서, 매물 또는 최근 6개월간 실거래가 있는 단지</p>
         </h6>
+        <h7>
+            문의·민원·저주 →→
+            <a href="https://blog.naver.com/spicy_gamza" target="_blank">블로그</a> 또는 
+            <a href="mailto:spicy_gamza@naver.com" target="_blank">이메일.</a> 
+        </h7>
+
     </div>
 
     <div class="px-4 py-4 my-0 text-left">
@@ -54,10 +60,10 @@
             <thead>
                 <tr class="tr-class-2">
                     <th data-field="cnm" data-sortable="true">이름</th>
-                    <th data-field="callPrice" data-sortable="true">호가 평단가</th>
+                    <th data-field="callPrice" data-sortable="true">매물 평단가</th>
                     <th data-field="realPrice" data-sortable="true">실거래 평단가</th>
                     <th data-field="kbPrice" data-sortable="true">KB 평단가</th>
-                    <th data-field="call_KB" data-sortable="true">호가 : KB</th>
+                    <th data-field="call_KB" data-sortable="true">매물 : KB</th>
                     <th data-field="real_KB" data-sortable="true">실거래 : KB</th>
                     <th data-field="callCount" data-sortable="true">매물 수</th>
                     <th data-field="realCount" data-sortable="true">실거래 수</th>
@@ -79,10 +85,10 @@
             <thead>
                 <tr>
                     <th data-field="dnm" data-sortable="true">이름</th>
-                    <th data-field="callPrice" data-sortable="true">호가 평단가</th>
+                    <th data-field="callPrice" data-sortable="true">매물 평단가</th>
                     <th data-field="realPrice" data-sortable="true">실거래 평단가</th>
                     <th data-field="kbPrice" data-sortable="true">KB 평단가</th>
-                    <th data-field="call_KB" data-sortable="true">호가 : KB</th>
+                    <th data-field="call_KB" data-sortable="true">매물 : KB</th>
                     <th data-field="real_KB" data-sortable="true">실거래 : KB</th>
                     <th data-field="callCount" data-sortable="true">매물 수</th>
                     <th data-field="realCount" data-sortable="true">실거래 수</th>
@@ -105,10 +111,10 @@
             <thead>
                 <tr>
                     <th data-field="snm" data-sortable="true">이름</th>
-                    <th data-field="callPrice" data-sortable="true">호가 평단가</th>
+                    <th data-field="callPrice" data-sortable="true">매물 평단가</th>
                     <th data-field="realPrice" data-sortable="true">실거래 평단가</th>
                     <th data-field="kbPrice" data-sortable="true">KB 평단가</th>
-                    <th data-field="call_KB" data-sortable="true">호가 : KB</th>
+                    <th data-field="call_KB" data-sortable="true">매물 : KB</th>
                     <th data-field="real_KB" data-sortable="true">실거래 : KB</th>
                     <th data-field="callCount" data-sortable="true">매물 수</th>
                     <th data-field="realCount" data-sortable="true">실거래 수</th>
@@ -132,10 +138,10 @@
                 <tr>
                     <th data-field="hnm" data-sortable="true" data-formatter="getComplexLink">이름</th>
                     <th data-field="typeNm" data-sortable="true">구분</th>
-                    <th data-field="callPrice" data-sortable="true">호가 평단가</th>
+                    <th data-field="callPrice" data-sortable="true">매물 평단가</th>
                     <th data-field="realPrice" data-sortable="true">실거래 평단가</th>
                     <th data-field="kbPrice" data-sortable="true">KB 평단가</th>
-                    <th data-field="call_KB" data-sortable="true">호가 : KB</th>
+                    <th data-field="call_KB" data-sortable="true">매물 : KB</th>
                     <th data-field="real_KB" data-sortable="true">실거래 : KB</th>
                     <th data-field="callCount" data-sortable="true">매물 수</th>
                     <th data-field="realCount" data-sortable="true">실거래 수</th>
@@ -210,7 +216,7 @@
                 $('#sect_box').show();
                 //$('#complex_box').hide();
 
-                $('#sect_title').html(`<p><b>${dvsnNm} (<a href="#dvsn_title">위로</a>)</p></b>`);
+                $('#sect_title').html(`<p><b>${dvsnNm} (<a href="#dvsn_title">위로</a>, <a href="#city_title">맨 위로</a>)</p></b>`);
                 $('#sect_table').bootstrapTable('destroy');
                 $('#sect_table').bootstrapTable({data: res})
 
@@ -229,7 +235,7 @@
                 //console.log(res); 
                 $('#complex_box').show();
 
-                $('#complex_title').html(`<p><b>${sectNm} (<a href="#sect_title">위로</a>)</p></b>`);
+                $('#complex_title').html(`<p><b>${sectNm} (<a href="#sect_title">위로</a>, <a href="#city_title">맨 위로</a>)</p></b>`);
                 $('#complex_table').bootstrapTable('destroy');
                 $('#complex_table').bootstrapTable({data: res})
 
