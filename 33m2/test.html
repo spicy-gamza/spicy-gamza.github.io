@@ -98,11 +98,14 @@ function arrangeData(data, min, max) {
     //console.log(prevMin, prevMax)
 }
 
+var dotmap1 = undefined; 
+var dotmap2 = undefined;
+
 function startDotMap1(data) {
     //console.log(data);
     arrangeData(data, 3, 20)
 
-    var dotmap = new naver.maps.visualization.DotMap({
+    dotmap1 = new naver.maps.visualization.DotMap({
         map: map,
         data: data.coordinates,
         radius: 20
