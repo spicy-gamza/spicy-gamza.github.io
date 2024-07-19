@@ -12,7 +12,7 @@
 <body>
     <br>
     <div style="text-align:center">
-        <p>33m2 예약 분포. 전국. 기준일자 2024-07-12.</p>
+        <p>33m2 예약 분포. 전국. 원룸. 기준일자 2024-07-12.</p>
         <br>
         <div id="map" style="width:90%;height:500px;margin:0 auto;"></div>
         
@@ -59,8 +59,40 @@ naver.maps.Event.once(map, 'init', function() {
     });
 });
 
+function arrangeData(data, min, max) {
+    if (!Array.isArray(data.coordinates)) return; 
+
+    let prevMin = +Infinity;
+    let prevMax = -Infinity; 
+
+
+    for (i=0; i<data.coordinates.length; i++) {
+        if (data.coordinates[i].weight > prevMax) prevMax = data.coordinates[i].weight;
+        if (data.coordinates[i].weight < prevMin) prevMin = data.coordinates[i].weight;
+    }
+
+    // 기울기 계산
+    let inclination = ( max - min ) / ( prevMax -prevMin )
+    // y절편 계산
+    let y_intersept = max - prevMax * inclination;
+
+    for (i=0; i<data.coordinates.length; i++) {
+        data.coordinates[i].weight = data.coordinates[i].weight * inclination + y_intersept; 
+    }
+    //console.log(data.coordinates)
+
+    // 제일 작은값을 하나 넣어준다. 
+    data.coordinates.push({
+        "weight":1.0,"location":[10,10]
+    })
+    
+    //console.log(prevMin, prevMax)
+}
+
 function startDotMap(data) {
     //console.log(data);
+    arrangeData(data, 3, 20); 
+
     var dotmap = new naver.maps.visualization.DotMap({
         map: map,
         data: data.coordinates,
