@@ -12,10 +12,13 @@
 <body>
     <br>
     <div style="text-align:center">
-        <p>33m2 예약 분포. 서울지역. 기준일자 2024-07-12.</p>
+        <p>33m2 전국 원룸 예약 분포. <label id="date_p"></label></p>
+        <div id="map" style="width:90%;height:600px;margin:0 auto;"></div>
         <br>
-        <div id="map" style="width:90%;height:500px;margin:0 auto;"></div>
-        
+        <button type="button" onclick="setDotmap('20240628')">2024년 06월 28일</button>
+        <button type="button" onclick="setDotmap('20240712')">2024년 07월 12일</button>
+        <button type="button" onclick="setDotmap('20240806')">2024년 08월 06일</button>
+        <button type="button" onclick="setDotmap('20240816')">2024년 08월 16일</button>
     </div>
 
 <script>
@@ -24,48 +27,67 @@ var HOME_PATH = window.HOME_PATH || '.';
 var mapDiv = document.getElementById('map');
 
 var mapOptions = {
-    center: new naver.maps.LatLng(37.5642135, 127.0016985),
+    center: new naver.maps.LatLng(37.5642135, 127.0016985), // 서울 중심 
     zoom: 10
 };
 
 var map = new naver.maps.Map(mapDiv, mapOptions);
 
-/*
-var dotDatas = {
-    "coordinates": [
-        {"weight":1.6, "location": [124.4,37.75]},
-        //{"weight":2.6, "location": [125.4,37.75]},
-        {"weight":55, "location": [126.88733,37.47643]},
-        {"weight":15, "location": [125.88733,37.47643]},
-    ]
-}
+var dotmap_r = undefined; 
+var dotmap_b = undefined;
 
-window.onload = function(){
-    var dotmap = new naver.maps.visualization.DotMap({
-        map: map,
-        data: dotDatas.coordinates,
-        radius: 20
+function setDotmap(dateStr) {
+    if (dotmap_r) {
+        dotmap_r.setMap(null);
+        dotmap_r = null; 
+    }
+
+    if (dotmap_b) {
+        dotmap_b.setMap(null);
+        dotmap_b = null; 
+    }
+
+    $('#date_p').text(dateStr);
+
+    $.ajax({
+        url: HOME_PATH +'/datas/' + dateStr + 'R.json',
+        dataType: 'json',
+        success: startDotMapR
+    });
+
+    $.ajax({
+        url: HOME_PATH +'/datas/' + dateStr + 'B.json',
+        dataType: 'json',
+        success: startDotMapB
     });
 
 }
-*/
 
 naver.maps.Event.once(map, 'init', function() {
     //console.log('데이터부르기')
+    setDotmap('20240628');
+    /*
     $.ajax({
-        url: HOME_PATH +'/data.json',
+        url: HOME_PATH +'/datas/20240712R.json',
         dataType: 'json',
-        success: startDotMap
+        success: startDotMapR
     });
+
+    $.ajax({
+        url: HOME_PATH +'/datas/20240712B.json',
+        dataType: 'json',
+        success: startDotMapB
+    });
+    */
 });
 
 
+// data.coordinates 배열의 최소/최대값을 재배치. 
 function arrangeData(data, min, max) {
     if (!Array.isArray(data.coordinates)) return; 
 
     let prevMin = +Infinity;
     let prevMax = -Infinity; 
-
 
     for (i=0; i<data.coordinates.length; i++) {
         if (data.coordinates[i].weight > prevMax) prevMax = data.coordinates[i].weight;
@@ -90,14 +112,27 @@ function arrangeData(data, min, max) {
     //console.log(prevMin, prevMax)
 }
 
-function startDotMap(data) {
+
+function startDotMapR(data) {
     //console.log(data);
-    arrangeData(data, 3, 20); 
-    
-    var dotmap = new naver.maps.visualization.DotMap({
+    arrangeData(data, 3, 20)
+
+    dotmap_r = new naver.maps.visualization.DotMap({
         map: map,
         data: data.coordinates,
         radius: 20
+    });
+}
+
+
+function startDotMapB(data) {
+    arrangeData(data, 3, 15)
+    
+    dotmap_b = new naver.maps.visualization.DotMap({
+        map: map,
+        data: data.coordinates,
+        radius: 15,
+        fillColor:'blue',
     });
 }
 
