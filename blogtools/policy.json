@@ -1,5 +1,7 @@
 {
-	"version": 20250514001,
-	"download": "/blogtools/release/download.zip",
-	"work": true
+	"release":{
+		"version": 20250516002,
+		"download": "release/BlogTools.zip"
+	},
+	"halt": false
 }
