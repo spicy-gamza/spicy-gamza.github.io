@@ -8,32 +8,47 @@
     -->
     <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=qcylpua0h2&amp;submodules=panorama,geocoder,drawing,visualization"></script>    
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .map-container { text-align: center; }
+        .title { justify-content: center; text-align: center; margin-top: 15px; display: flex; }
+        #map { margin: 0 auto; border: 1px solid #ccc; }
+        select { padding: 5px 10px; border-radius: 4px; border: 1px solid #ddd; }
+        label { margin-right: 5px; }
+        #currentDateDisplay { font-weight: bold; color: #333; }
+    </style>
 </head>
 <body>
     <br>
-    <div style="text-align:center">
-        <p>33m2 전국 원룸 예약 분포. <label id="date_p"></label></p>
-        <div id="map" style="width:90%;height:600px;margin:0 auto;"></div>
+    <div class="map-container">
+        <div class="title"><b>33m2 전국 원룸 예약 분포. &nbsp;</b> <!--<span id="currentDateDisplay"></span>-->
+            <div class="controls">
+                <label for="dateSelector">날짜 선택:</label>
+                <select id="dateSelector">
+                    <option value="20240628" selected>2024년 06월 28일</option>
+                    <option value="20240712">2024년 07월 12일</option>
+                    <option value="20240806">2024년 08월 06일</option>
+                    <option value="20240816">2024년 08월 16일</option>
+                    <option value="20240828">2024년 08월 28일</option>
+                    <option value="20240919">2024년 09월 19일</option>
+                    <option value="20240930">2024년 09월 30일</option>
+                    <option value="20241027">2024년 10월 27일</option>
+                    <option value="20241203">2024년 12월 03일</option>
+                    <option value="20241230">2024년 12월 30일</option>
+                    <option value="20250124">2025년 01월 24일</option>
+                    <option value="20250304">2025년 03월 04일</option>
+                    <option value="20250328">2025년 03월 28일</option>
+                    <option value="20250428">2025년 04월 28일</option>
+                    <option value="20250516">2025년 05월 16일</option>
+                    <option value="20250530">2025년 05월 30일</option>
+                    <option value="20250616">2025년 06월 16일</option>
+                    <option value="20250630">2025년 06월 30일</option>
+                    <option value="20250715">2025년 07월 15일</option>
+                </select>
+            </div>
+        </div>
         <br>
-        <button type="button" onclick="setDotmap('20240628')">2024년 06월 28일</button>
-        <button type="button" onclick="setDotmap('20240712')">2024년 07월 12일</button>
-        <button type="button" onclick="setDotmap('20240806')">2024년 08월 06일</button>
-        <button type="button" onclick="setDotmap('20240816')">2024년 08월 16일</button>
-        <button type="button" onclick="setDotmap('20240828')">2024년 08월 28일</button>
-        <button type="button" onclick="setDotmap('20240919')">2024년 09월 19일</button>
-        <button type="button" onclick="setDotmap('20240930')">2024년 09월 30일</button>
-        <button type="button" onclick="setDotmap('20241027')">2024년 10월 27일</button>
-        <button type="button" onclick="setDotmap('20241203')">2024년 12월 03일</button>
-        <button type="button" onclick="setDotmap('20241230')">2024년 12월 30일</button>
-        <button type="button" onclick="setDotmap('20250124')">2025년 01월 24일</button>
-        <button type="button" onclick="setDotmap('20250304')">2025년 03월 04일</button>
-        <button type="button" onclick="setDotmap('20250328')">2025년 03월 28일</button>
-        <button type="button" onclick="setDotmap('20250428')">2025년 04월 28일</button>
-        <button type="button" onclick="setDotmap('20250516')">2025년 05월 16일</button>
-        <button type="button" onclick="setDotmap('20250530')">2025년 05월 30일</button>
-        <button type="button" onclick="setDotmap('20250616')">2025년 06월 16일</button>
-        <button type="button" onclick="setDotmap('20250630')">2025년 06월 30일</button>
-        <button type="button" onclick="setDotmap('20250715')">2025년 07월 15일</button>
+        <div id="map" style="width:90%;height:600px;margin:0 auto;"></div>
     </div>
 
 <script>
@@ -62,8 +77,15 @@ function setDotmap(dateStr) {
         dotmap_b = null; 
     }
 
-    $('#date_p').text(dateStr);
-
+    /*
+    // $('#date_p').text(dateStr);
+    // 날짜 텍스트 업데이트 (예: '2024년 06월 28일')
+    const year = dateStr.substring(0, 4);
+    const month = dateStr.substring(4, 6);
+    const day = dateStr.substring(6, 8);
+    $('#currentDateDisplay').text(`${year}년 ${month}월 ${day}일`);
+    */
+   
     $.ajax({
         url: HOME_PATH +'/datas/' + dateStr + 'R.json',
         dataType: 'json',
@@ -79,8 +101,10 @@ function setDotmap(dateStr) {
 }
 
 naver.maps.Event.once(map, 'init', function() {
-    //console.log('데이터부르기')
-    setDotmap('20240628');
+    const initialDate = $('#dateSelector').val();
+    console.log('데이터부르기', initialDate)
+
+    setDotmap(initialDate);
     /*
     $.ajax({
         url: HOME_PATH +'/datas/20240712R.json',
@@ -151,6 +175,11 @@ function startDotMapB(data) {
     });
 }
 
+// 콤보박스 변경 이벤트 리스너
+$('#dateSelector').on('change', function() {
+    const selectedDate = $(this).val();
+    setDotmap(selectedDate);
+});
 
 </script>
 </body>
