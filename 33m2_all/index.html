@@ -12,28 +12,11 @@
 <body>
     <br>
     <div style="text-align:center">
-        <p>33m2 전국 원룸 예약 분포. <label id="date_p"></label></p>
+        <p>33m2 전국 호스트 예약 분포. <label id="date_p"></label></p>
         <div id="map" style="width:90%;height:600px;margin:0 auto;"></div>
         <br>
-        <button type="button" onclick="setDotmap('20240628')">2024년 06월 28일</button>
-        <button type="button" onclick="setDotmap('20240712')">2024년 07월 12일</button>
-        <button type="button" onclick="setDotmap('20240806')">2024년 08월 06일</button>
-        <button type="button" onclick="setDotmap('20240816')">2024년 08월 16일</button>
-        <button type="button" onclick="setDotmap('20240828')">2024년 08월 28일</button>
-        <button type="button" onclick="setDotmap('20240919')">2024년 09월 19일</button>
-        <button type="button" onclick="setDotmap('20240930')">2024년 09월 30일</button>
-        <button type="button" onclick="setDotmap('20241027')">2024년 10월 27일</button>
-        <button type="button" onclick="setDotmap('20241203')">2024년 12월 03일</button>
-        <button type="button" onclick="setDotmap('20241230')">2024년 12월 30일</button>
-        <button type="button" onclick="setDotmap('20250124')">2025년 01월 24일</button>
-        <button type="button" onclick="setDotmap('20250304')">2025년 03월 04일</button>
-        <button type="button" onclick="setDotmap('20250328')">2025년 03월 28일</button>
-        <button type="button" onclick="setDotmap('20250428')">2025년 04월 28일</button>
-        <button type="button" onclick="setDotmap('20250516')">2025년 05월 16일</button>
-        <button type="button" onclick="setDotmap('20250530')">2025년 05월 30일</button>
-        <button type="button" onclick="setDotmap('20250616')">2025년 06월 16일</button>
-        <button type="button" onclick="setDotmap('20250630')">2025년 06월 30일</button>
         <button type="button" onclick="setDotmap('20250715')">2025년 07월 15일</button>
+        
     </div>
 
 <script>
@@ -80,7 +63,7 @@ function setDotmap(dateStr) {
 
 naver.maps.Event.once(map, 'init', function() {
     //console.log('데이터부르기')
-    setDotmap('20240628');
+    setDotmap('20250715');
     /*
     $.ajax({
         url: HOME_PATH +'/datas/20240712R.json',
