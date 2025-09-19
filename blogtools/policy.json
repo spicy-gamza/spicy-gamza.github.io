@@ -1,7 +1,8 @@
 {
 	"release":{
-		"version": 20250516002,
-		"download": "release/BlogTools.zip"
+		"version": 2025051602,
+		"download": "release/BlogTools.zip",
+		"update": "update/update_bin.z"
 	},
 	"halt": false
 }
