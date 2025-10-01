@@ -1,9 +1,9 @@
 {
 	"release":{
-		"version": 2025100104,
-		"download": "release/BlogTools_2025100104.zip",
-		"update": "update/update_bin_2025100104.z",
-		"notice":"2025.10.01.04.업데이트지원"
+		"version": 2025100201,
+		"download": "release/BlogTools_2025100201.zip",
+		"update": "update/update_bin_2025100201.z",
+		"notice":"2025.10.02.01.업데이트지원"
 	},
 	"halt": false
 }
