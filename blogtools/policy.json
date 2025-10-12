@@ -1,9 +1,12 @@
 {
 	"release":{
-		"version": 2025100201,
-		"download": "release/BlogTools_2025100201.zip",
-		"update": "update/update_bin_2025100201.z",
-		"notice":"2025.10.02.01.업데이트지원"
+		"version": 2025101003,
+		"download": "release/BlogTools_2025101201.exe",
+		"update": "update/update_bin_2025101201.z",
+		"notice":"2025.10.12.01. 챗지피티 오류 수정"
 	},
+	"_market": [
+		{"title":"스마트스토어", "url": "https://mkt.shopping.naver.com/link/68dce021ac70163d89cbd91f"}
+	],
 	"halt": false
 }
