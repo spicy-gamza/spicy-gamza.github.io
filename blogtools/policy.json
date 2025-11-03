@@ -1,9 +1,9 @@
 {
 	"release":{
-		"version": 2025101201,
-		"download": "release/BlogTools_2025101201.exe",
-		"update": "update/update_bin_2025101201.z",
-		"notice":"2025.10.12.01. 챗지피티 오류 수정"
+		"version": 2025110302,
+		"download": "release/BlogTools_2025110302.exe",
+		"update": "update/update_bin_2025110302.z",
+		"notice":"2025.11.13.02. \r\n  챗지피티 답변 안정화\r\n  공감 이모티콘 선택 기능"
 	},
 	"_market": [
 		{"title":"스마트스토어", "url": "https://mkt.shopping.naver.com/link/68dce021ac70163d89cbd91f"}
