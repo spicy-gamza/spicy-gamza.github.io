@@ -1,9 +1,9 @@
 {
 	"release":{
-		"version": 2025110804,
-		"download": "release/BlogTools_2025110804.exe",
-		"update": "update/update_bin_2025110804.z",
-		"notice":"2025.11.08.04. \r\n  답방 우선 모드 추가 \r\n  "
+		"version": 2025110805,
+		"download": "release/BlogTools_2025110805.exe",
+		"update": "update/update_bin_2025110805.z",
+		"notice":"2025.11.08.05. \r\n  답방 우선 모드 추가 \r\n  "
 	},
 	"_market": [
 		{"title":"스마트스토어", "url": "https://mkt.shopping.naver.com/link/68dce021ac70163d89cbd91f"}
