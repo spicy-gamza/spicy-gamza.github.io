@@ -1,12 +1,12 @@
 {
 	"release":{
-		"version": 2025110805,
-		"download": "release/BlogTools_2025110805.exe",
-		"update": "update/update_bin_2025110805.z",
-		"notice":"2025.11.08.05. \r\n  답방 우선 모드 추가 \r\n  "
+		"version": 2025111203,
+		"download": "release/BlogTools_2025111203.exe",
+		"update": "update/update_bin_2025111203.z",
+		"notice":"2025.11.12.03. \r\n  답글용 AI 모델 선택 기능 \r\n\r\n2025.11.08.05. \r\n  답방 우선 모드 추가 \r\n  "
 	},
 	"_market": [
-		{"title":"스마트스토어", "url": "https://mkt.shopping.naver.com/link/68dce021ac70163d89cbd91f"}
+		{"title":"크몽", "url": "https://kmong.com/gig/712949"}
 	],
 	"halt": false
 }
