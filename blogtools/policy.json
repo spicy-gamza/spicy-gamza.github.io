@@ -5,7 +5,14 @@
 		"update": "update/update_bin_2025111203.z",
 		"notice":"2025.11.12.03. \r\n  답글용 AI 모델 선택 기능 \r\n\r\n2025.11.08.05. \r\n  답방 우선 모드 추가 \r\n  "
 	},
-	"_market": [
+	"helps": [
+		{"title":"제미나이 API 키 이야기 1", "url": "https://oranke.tistory.com/278"},
+		{"title":"제미나이 API 키 이야기 2", "url": "https://oranke.tistory.com/280"}
+	],
+	"ctrl": {
+		"addr": "https://211.178.56.232:50102/blogtools/v1"
+	},
+	"market": [
 		{"title":"크몽", "url": "https://kmong.com/gig/712949"}
 	],
 	"halt": false
