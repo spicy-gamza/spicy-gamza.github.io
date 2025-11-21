@@ -7,7 +7,9 @@
 	},
 	"helps": [
 		{"title":"제미나이 API 키 이야기 1", "url": "https://oranke.tistory.com/278"},
-		{"title":"제미나이 API 키 이야기 2", "url": "https://oranke.tistory.com/280"}
+		{"title":"제미나이 API 키 이야기 2", "url": "https://oranke.tistory.com/280"},
+		{"title":"한 컴퓨터에서 여러 개 실행", "url": "https://oranke.tistory.com/281"}
+		
 	],
 	"ctrl": {
 		"addr": "https://211.178.56.232:50102/blogtools/v1"
