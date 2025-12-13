@@ -1,9 +1,9 @@
 {
 	"release":{
-		"version": 2025120805,
-		"download": "release/BlogTools_2025120805.exe",
-		"update": "update/update_bin_2025120805.z",
-		"notice":"2025.12.08.05. \r\n  Groq API 지원\r\n\r\n2025.11.12.03. \r\n  답글용 AI 모델 선택 기능 \r\n\r\n2025.11.08.05. \r\n  답방 우선 모드 추가 \r\n  "
+		"version": 2025121302,
+		"download": "release/BlogTools_2025121302.exe",
+		"update": "update/update_bin_2025121302.z",
+		"notice":"2025.12.13.02. \r\n API키 사용방식 개선, OpenRouter 지원\r\n\r\n2025.12.08.05. \r\n  Groq API 지원\r\n\r\n"
 	},
 	"helps": [
 		{"title":"제미나이 API 키 이야기 1", "url": "https://oranke.tistory.com/278"},
