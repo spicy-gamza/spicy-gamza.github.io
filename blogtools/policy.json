@@ -1,14 +1,17 @@
 {
 	"release":{
-		"version": 2025121302,
-		"download": "release/BlogTools_2025121302.exe",
-		"update": "update/update_bin_2025121302.z",
-		"notice":"2025.12.13.02. \r\n API키 사용방식 개선, OpenRouter 지원\r\n\r\n2025.12.08.05. \r\n  Groq API 지원\r\n\r\n"
+		"version": 2025122202,
+		"download": "release/BlogTools_2025122202.exe",
+		"update": "update/update_bin_2025122202.z",
+		"notice":"2025.12.22.02. \r\n OpenRouter 응답오류 대응\r\n\r\n2025.12.13.02. \r\n API키 사용방식 개선, OpenRouter 지원\r\n\r\n"
 	},
 	"helps": [
 		{"title":"제미나이 API 키 이야기 1", "url": "https://oranke.tistory.com/278"},
 		{"title":"제미나이 API 키 이야기 2", "url": "https://oranke.tistory.com/280"},
-		{"title":"한 컴퓨터에서 여러 개 실행", "url": "https://oranke.tistory.com/281"}
+		{"title":"한 컴퓨터에서 여러 개 실행", "url": "https://oranke.tistory.com/281"},
+		{"title": "-"},
+		{"title":"제미나이(Google AI)의 배신, Groq 가지고 놀아보기", "url": "https://oranke.tistory.com/283"}
+		
 	],
 	"ctrl": {
 		"addr": "https://211.178.56.232:50102/blogtools/v1"
