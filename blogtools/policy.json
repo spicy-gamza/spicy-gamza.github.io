@@ -1,9 +1,9 @@
 {
 	"release":{
-		"version": 2025122202,
-		"download": "release/BlogTools_2025122202.exe",
-		"update": "update/update_bin_2025122202.z",
-		"notice":"2025.12.22.02. \r\n OpenRouter 응답오류 대응\r\n\r\n2025.12.13.02. \r\n API키 사용방식 개선, OpenRouter 지원\r\n\r\n"
+		"version": 2026010602,
+		"download": "release/BlogTools_2026010602.exe",
+		"update": "update/update_bin_2026010602.z",
+		"notice":"2026.01.06.02. \r\n 로그인 코드 개선\r\n OpenRouter 지원 강화\r\n\r\n2025.12.22.02. \r\n OpenRouter 응답오류 대응\r\n\r\n2025.12.13.02. \r\n API키 사용방식 개선, OpenRouter 지원\r\n\r\n"
 	},
 	"helps": [
 		{"title":"제미나이 API 키 이야기 1", "url": "https://oranke.tistory.com/278"},
