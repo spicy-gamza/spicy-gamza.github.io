@@ -15,7 +15,8 @@
 		
 	],
 	"ctrl": {
-		"addr": "https://211.178.56.232:50102/blogtools/v1"
+		"addr_old": "https://211.178.56.232:50102/blogtools/v1",
+		"addr": "https://34.64.195.80:50102/blogtools/v1"
 	},
 	"market": [
 		{"title":"크몽", "url": "https://kmong.com/gig/712949"}
