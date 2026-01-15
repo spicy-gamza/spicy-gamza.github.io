@@ -1,9 +1,9 @@
 {
 	"release":{
-		"version": 2026010902,
-		"download": "release/BlogTools_2026010902.exe",
-		"update": "update/update_bin_2026010902.z",
-		"notice":"2026.01.09.02. \r\n 답글 AI 설정화면 개선\r\n\r\n2026.01.06.02. \r\n 로그인 코드 개선\r\n OpenRouter 지원 강화\r\n\r\n2025.12.22.02. \r\n OpenRouter 응답오류 대응\r\n\r\n"
+		"version": 2026011501,
+		"download": "release/BlogTools_2026011501.exe",
+		"update": "update/update_bin_2026011501.z",
+		"notice":"2026.01.15.01. \r\n 답글 AI Pool 베타 테스트\r\n\r\n2026.01.09.02. \r\n 답글 AI 설정화면 개선\r\n\r\n2026.01.06.02. \r\n 로그인 코드 개선\r\n OpenRouter 지원 강화\r\n\r\n"
 	},
 	"helps": [
 		{"title":"제미나이 API 키 이야기 1", "url": "https://oranke.tistory.com/278"},
@@ -11,8 +11,8 @@
 		{"title":"한 컴퓨터에서 여러 개 실행", "url": "https://oranke.tistory.com/281"},
 		{"title": "-"},
 		{"title":"제미나이(Google AI)의 배신, Groq 가지고 놀아보기", "url": "https://oranke.tistory.com/283"},
-		{"title":"아주 쓸만한 댓글 작성용 AI, 오픈라우터", "url": "https://oranke.tistory.com/284"}
-		
+		{"title":"아주 쓸만한 댓글 작성용 AI, 오픈라우터", "url": "https://oranke.tistory.com/284"},
+		{"title":"블로그 답글용 API 키 설정, 이보다 쉬울 수는 없습니다!", "url": "https://oranke.tistory.com/285"}
 	],
 	"ctrl": {
 		"addr_old": "https://211.178.56.232:50102/blogtools/v1",
