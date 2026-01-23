@@ -1,9 +1,9 @@
 {
 	"release":{
-		"version": 2026011501,
-		"download": "release/BlogTools_2026011501.exe",
-		"update": "update/update_bin_2026011501.z",
-		"notice":"2026.01.15.01. \r\n 답글 AI Pool 베타 테스트\r\n\r\n2026.01.09.02. \r\n 답글 AI 설정화면 개선\r\n\r\n2026.01.06.02. \r\n 로그인 코드 개선\r\n OpenRouter 지원 강화\r\n\r\n"
+		"version": 2026012301,
+		"download": "release/BlogTools_2026012301.exe",
+		"update": "update/update_bin_2026012301.z",
+		"notice":"2026.01.23.01.\r\n OpenRouter 미사용모델 정리\r\n\r\n2026.01.15.01.\r\n 답글 AI Pool 베타 테스트\r\n\r\n2026.01.09.02.\r\n 답글 AI 설정화면 개선\r\n\r\n"
 	},
 	"helps": [
 		{"title":"제미나이 API 키 이야기 1", "url": "https://oranke.tistory.com/278"},
