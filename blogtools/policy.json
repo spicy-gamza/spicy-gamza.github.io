@@ -6,6 +6,8 @@
 		"notice":"2026.01.23.01.\r\n OpenRouter 미사용모델 정리\r\n\r\n2026.01.15.01.\r\n 답글 AI Pool 베타 테스트\r\n\r\n2026.01.09.02.\r\n 답글 AI 설정화면 개선\r\n\r\n"
 	},
 	"helps": [
+		{"title":"사용 설명서", "url": "https://docs.google.com/document/d/1ULS4lvy4_DduecCUFGcPZvdIQCDCvW11qEnWAcZ2KZE/edit?usp=sharing"},
+		{"title": "-"},
 		{"title":"제미나이 API 키 이야기 1", "url": "https://oranke.tistory.com/278"},
 		{"title":"제미나이 API 키 이야기 2", "url": "https://oranke.tistory.com/280"},
 		{"title":"한 컴퓨터에서 여러 개 실행", "url": "https://oranke.tistory.com/281"},
