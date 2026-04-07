@@ -1,9 +1,9 @@
 {
 	"release":{
-		"version": 2026022001,
-		"download": "release/BlogTools_2026022001.exe",
-		"update": "update/update_bin_2026022001.z",
-		"notice":"2026.02.20.01.\r\n 클릭 없이 글 정보만 수집 기능 추가\r\n 답글 데이터 보기 기능 추가\r\n LLM 모델 정리\r\n\r\n2026.01.23.01.\r\n OpenRouter 미사용모델 정리\r\n\r\n2026.01.15.01.\r\n 답글 AI Pool 베타 테스트\r\n\r\n"
+		"version": 2026040701,
+		"download": "release/BlogTools_2026040701.exe",
+		"update": "update/update_bin_2026040701.z",
+		"notice":"2026.04.07.01.\r\n Google Vertex AI 지원\r\n 동작정보 엑셀형식 출력\r\n\r\n2026.02.20.01.\r\n 클릭 없이 글 정보만 수집 기능 추가\r\n 답글 데이터 보기 기능 추가\r\n LLM 모델 정리\r\n\r\n"
 	},
 	"helps": [
 		{"title":"사용 설명서", "url": "https://docs.google.com/document/d/1ULS4lvy4_DduecCUFGcPZvdIQCDCvW11qEnWAcZ2KZE/edit?usp=sharing"},
