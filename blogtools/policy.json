@@ -1,9 +1,9 @@
 {
 	"release":{
-		"version": 2026071501,
-		"download": "release/BlogTools_2026071501.exe",
-		"update": "update/update_bin_2026071501.z",
-		"notice":"2026.07.15.01.\r\n 로그인 변경 대응\r\n\r\n2026.05.15.01.\r\n 공감 클릭 최소값 변경\r\n\r\n2026.04.15.01.\r\n 답변 진행 버그 수정\r\n\r\n2026.04.07.02.\r\n Google Vertex AI 지원\r\n 동작정보 엑셀형식 출력\r\n\r\n"
+		"version": 2026080401,
+		"download": "release/BlogTools_2026080401.exe",
+		"update": "update/update_bin_2026080401.z",
+		"notice":"2026.08.04.01.\r\n 답글 구조 변경 대응\r\n\r\n2026.07.15.01.\r\n 로그인 변경 대응\r\n\r\n2026.05.15.01.\r\n 공감 클릭 최소값 변경\r\n\r\n2026.04.15.01.\r\n 답변 진행 버그 수정\r\n\r\n"
 	},
 	"helps": [
 		{"title":"사용 설명서", "url": "https://docs.google.com/document/d/1ULS4lvy4_DduecCUFGcPZvdIQCDCvW11qEnWAcZ2KZE/edit?usp=sharing"},
