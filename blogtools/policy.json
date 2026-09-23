@@ -1,9 +1,9 @@
 {
 	"release":{
-		"version": 2026080401,
-		"download": "release/BlogTools_2026080401.exe",
-		"update": "update/update_bin_2026080401.z",
-		"notice":"2026.08.04.01.\r\n 답글 구조 변경 대응\r\n\r\n2026.07.15.01.\r\n 로그인 변경 대응\r\n\r\n2026.05.15.01.\r\n 공감 클릭 최소값 변경\r\n\r\n2026.04.15.01.\r\n 답변 진행 버그 수정\r\n\r\n"
+		"version": 2026092301,
+		"download": "release/BlogTools_2026092301.zip",
+		"update": "update/update_bin_2026092301.z",
+		"notice":"2026.09.23.01.\r\n 공감 대기시간 조절\r\n 답글 프롬프트 수정\r\n\r\n2026.08.04.01.\r\n 답글 구조 변경 대응\r\n\r\n2026.07.15.01.\r\n 로그인 변경 대응\r\n\r\n2026.05.15.01.\r\n 공감 클릭 최소값 변경\r\n\r\n"
 	},
 	"helps": [
 		{"title":"사용 설명서", "url": "https://docs.google.com/document/d/1ULS4lvy4_DduecCUFGcPZvdIQCDCvW11qEnWAcZ2KZE/edit?usp=sharing"},
